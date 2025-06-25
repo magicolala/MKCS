@@ -6,13 +6,14 @@
     --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
     --gold-gradient: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);
     --purple-gradient: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
-    --glass-white: rgba(255, 255, 255, 0.15);
-    --glass-white-strong: rgba(255, 255, 255, 0.25);
+    --glass-white: rgba(255, 255, 255, 0.1);
+    --glass-white-strong: rgba(255, 255, 255, 0.2);
     --glass-dark: rgba(0, 0, 0, 0.1);
-    --glass-border: rgba(255, 255, 255, 0.47);
+    --glass-border: rgba(255, 255, 255, 0.2);
     --text-primary: #1a1a2e;
     --text-secondary: #16213e;
     --text-light: rgba(255, 255, 255, 0.9);
+    --shadow-soft: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 * {
@@ -60,14 +61,21 @@ body::before {
 
 /* Bootstrap Navigation Override */
 .glass-navbar {
-    background: var(--glass-white) !important;
+    background: var(--glass-white);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    box-shadow: var(--shadow-soft);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
     border: 1px solid var(--glass-border);
     margin: 20px;
     transition: all 0.4s ease;
+}
+
+.glass-navbar.scrolled {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
 }
 
 .glass-navbar .container {
@@ -99,7 +107,7 @@ body::before {
 }
 
 .glass-nav-link:hover {
-    background: var(--glass-white-strong) !important;
+    background: var(--glass-white-strong);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     transform: translateY(-2px);
@@ -128,10 +136,10 @@ body::before {
 
 .hero-glass {
     background: var(--glass-white);
-    border-radius: 24px;
-    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
+    border-radius: 28px;
+    box-shadow: var(--shadow-soft);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
     border: 1px solid var(--glass-border);
     position: relative;
     z-index: 2;
@@ -231,10 +239,10 @@ body::before {
 /* Section Glass */
 .section-glass {
     background: var(--glass-white);
-    border-radius: 24px;
-    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
+    border-radius: 28px;
+    box-shadow: var(--shadow-soft);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
     border: 1px solid var(--glass-border);
     transition: all 0.3s ease;
 }
@@ -252,10 +260,10 @@ body::before {
 /* Product Cards */
 .product-card {
     background: var(--glass-white);
-    border-radius: 20px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    border-radius: 22px;
+    box-shadow: var(--shadow-soft);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
     border: 1px solid var(--glass-border);
     overflow: hidden;
     transition: all 0.4s ease;
@@ -283,7 +291,10 @@ body::before {
 
 .product-card:hover {
     transform: translateY(-15px) scale(1.02);
-    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+    background: var(--glass-white-strong);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
 }
 
 .product-image {
@@ -360,12 +371,12 @@ body::before {
 }
 
 .whatsapp-btn {
-    background: var(--glass-white-strong) !important;
+    background: var(--glass-white-strong);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    border: 1px solid var(--glass-border) !important;
+    border: 1px solid var(--glass-border);
     color: var(--text-secondary) !important;
-    border-radius: 50px !important;
+    border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
@@ -394,7 +405,7 @@ body::before {
 .whatsapp-btn:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-    background: var(--glass-white) !important;
+    background: var(--glass-white);
     color: var(--text-secondary) !important;
 }
 
@@ -411,10 +422,10 @@ body::before {
 /* Footer */
 .footer-glass {
     background: var(--glass-white);
-    border-radius: 24px 24px 0 0;
-    box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
+    border-radius: 28px 28px 0 0;
+    box-shadow: var(--shadow-soft);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
     border: 1px solid var(--glass-border);
     border-bottom: none;
 }
@@ -538,11 +549,11 @@ body::before {
     .product-image {
         height: 180px;
         margin: 8px;
+        border-radius: 16px;
     }
 
     .glass-nav-link {
-        padding: 6px 12px !important;
-        font-size: 0.9rem;
+        padding: 8px 12px !important;
         margin: 2px 0;
     }
 }
@@ -580,7 +591,8 @@ body::before {
 .section-glass,
 .product-card,
 .whatsapp-btn,
-.glass-nav-link {
+.glass-nav-link,
+.glass-navbar {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -588,6 +600,7 @@ body::before {
 .section-glass:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 50px rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 0.15);
 }
 
 /* Loading animation for images */
@@ -665,6 +678,7 @@ body::before {
     .product-card,
     .hero-glass {
         background: white;
+        backdrop-filter: none;
         box-shadow: none;
         border: 1px solid #ddd;
     }
