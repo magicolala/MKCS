@@ -3,7 +3,7 @@
 :root {
     --primary-gradient: linear-gradient(320deg, #f27121, #e94057, #8a2387);
     --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-    --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    --accent-gradient: linear-gradient(135deg, #4facfe 0%, #0c4f73 100%);
     --gold-gradient: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);
     --purple-gradient: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
     --glass-white: rgba(255, 255, 255, 0.1);
@@ -251,7 +251,7 @@ body::before {
     font-family: 'Emilys Candy', serif;
     font-size: 2.5rem;
     font-weight: 400;
-    background: var(--accent-gradient);
+    background: var(--text-primary);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -352,7 +352,7 @@ body::before {
 }
 
 .product-price {
-    background: var(--accent-gradient);
+    background: var(--text-primary);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
