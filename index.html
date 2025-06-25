@@ -10,6 +10,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Animate.css for WOW.js -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -55,7 +57,7 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8 col-md-10">
-          <div class="hero-glass text-center p-5">
+          <div class="hero-glass text-center p-5 wow fadeInUp" data-wow-duration="1s">
             <h1 class="display-3 mb-4">L'Art de la Pâtisserie</h1>
             <p class="hero-subtitle fs-4 mb-4">Créations Artisanales • Saveurs Authentiques</p>
             <p class="hero-description fs-5">Découvrez l'excellence de la pâtisserie camerounaise avec des créations uniques qui éveillent vos sens</p>
@@ -69,10 +71,10 @@
   <section id="products" class="py-5">
     <div class="container">
       <div class="section-glass p-5">
-        <h2 class="section-title text-center mb-5">Nos Créations Signature</h2>
+        <h2 class="section-title text-center mb-5 wow fadeInDown">Nos Créations Signature</h2>
         <div class="row g-4">
           <div class="col-lg-4 col-md-6">
-            <div class="product-card h-100">
+            <div class="product-card h-100 wow fadeInUp" data-wow-delay="0.1s">
               <div class="product-image">
                 <img src="img/gateau.png" alt="Gâteau d'Anniversaire" class="img-fluid">
               </div>
@@ -85,7 +87,7 @@
           </div>
 
           <div class="col-lg-4 col-md-6">
-            <div class="product-card h-100">
+            <div class="product-card h-100 wow fadeInUp" data-wow-delay="0.2s">
               <div class="product-image">
                 <img src="img/crepe_trad.png" alt="Crêpe Tradition" class="img-fluid">
               </div>
@@ -98,7 +100,7 @@
           </div>
 
           <div class="col-lg-4 col-md-6">
-            <div class="product-card h-100">
+            <div class="product-card h-100 wow fadeInUp" data-wow-delay="0.3s">
               <div class="product-image">
                 <img src="img/crepe_choco.png" alt="Crêpe Chocolat Premium" class="img-fluid">
               </div>
@@ -117,7 +119,7 @@
   <!-- About Section -->
   <section id="about" class="py-5">
     <div class="container">
-      <div class="section-glass about-content text-center p-5">
+      <div class="section-glass about-content text-center p-5 wow fadeIn" data-wow-duration="1s">
         <h2 class="section-title mb-5">Notre Passion, Votre Plaisir</h2>
         <p class="about-text fs-5 lh-lg">
           MKCS Entreprise incarne l'excellence de la pâtisserie artisanale au cœur du Cameroun. Nous créons avec passion
@@ -132,7 +134,7 @@
   <!-- Contact Section -->
   <section id="contact" class="py-5">
     <div class="container">
-      <div class="section-glass text-center p-5">
+      <div class="section-glass text-center p-5 wow fadeIn" data-wow-duration="1s">
         <h2 class="section-title mb-4">Créons Ensemble Vos Moments Sucrés</h2>
         <p class="contact-description fs-5 mb-5">Contactez-nous pour transformer vos rêves gourmands en réalité</p>
         <a class="btn whatsapp-btn btn-lg px-5 py-3" href="https://wa.me/237698511478?text=Bonjour%20je%20voudrais%20passer%20commande">
@@ -162,7 +164,13 @@
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
+  <!-- WOW.js for scroll animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
   <script>
+    // Initialize WOW.js
+    new WOW().init();
+
     // Smooth scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
